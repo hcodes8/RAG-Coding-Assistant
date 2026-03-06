@@ -1,13 +1,10 @@
 import pytest
 from pathlib import Path
 from unittest.mock import patch
-
-from langchain.schema import Document
+from langchain_core.documents import Document
 import app.document_loader as dl
 
-
-# Helpers
-
+# Helper
 def _make_lang_dir(tmp_path: Path, language: str, files: dict) -> Path:
     """
     Create a docs/<language>/ directory inside tmp_path and populate it.
@@ -25,7 +22,6 @@ def _make_lang_dir(tmp_path: Path, language: str, files: dict) -> Path:
 
 
 # Tests
-
 class TestGetAvailableLanguages:
     def test_returns_sorted_language_names(self, tmp_path):
         # Create two language folders in tmp_path (acts as fake docs/ dir)
