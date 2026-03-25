@@ -18,3 +18,4 @@ pytest-mock
 fastapi
 uvicorn
 sse-starlette
+pywebview

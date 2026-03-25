@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RAG Coding Assistant</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+ 
+  <!-- Title bar -->
+  <header id="titlebar">
+    <div class="logo"></div>
+    <h1>RAG Coding Assistant</h1>
+    <div class="spacer"></div>
+    <div id="status-dot"></div>
+    <span id="status-label">connecting…</span>
+  </header>
+ 
+  <!-- Sidebar -->
+  <nav id="sidebar">
+    <div class="section-label">Languages</div>
+    <div id="lang-list">
+      <!-- populated by JS -->
+    </div>
+    <div id="sidebar-footer">
+      Select a language to begin
+    </div>
+  </nav>
+ 
+  <!-- Main -->
+  <main id="main">
+    <div id="messages">
+      <div id="empty-state">
+        <div class="big-icon">💬</div>
+        <p>Choose a language on the left, then ask anything about its docs or APIs.</p>
+      </div>
+    </div>
+ 
+    <div id="input-area">
+      <div id="no-lang-warning">⚠ Select a language before asking a question.</div>
+      <div id="input-row">
+        <textarea
+          id="question-input"
+          placeholder="Ask a coding question…"
+          rows="1"
+        ></textarea>
+        <button id="send-btn" disabled>Send</button>
+      </div>
+      <div id="input-hint">Enter to send · Shift+Enter for new line</div>
+    </div>
+  </main>
+ 
+</div>
+<script src="app.js"></script>
+</body>
+</html>
